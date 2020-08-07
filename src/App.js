@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Wrapper from './component/Wrapper';
+import Button from "@material-ui/core/Button";
 
 function App() {
   return (
-    <div className="App">
-      <Wrapper \>
+    <div>
+      <Wrapper />
     </div>
   );
 }
