@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
 import Wrapper from './component/Wrapper';
-import Button from "@material-ui/core/Button";
+import theme from "./component/Themesui.js";
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
 
 function App() {
   return (
-    <div>
+
+    <ThemeProvider theme = {theme}>
+
       <Wrapper />
-    </div>
+
+    </ThemeProvider>
+    
   );
 }
 
