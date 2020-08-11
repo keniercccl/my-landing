@@ -7,6 +7,7 @@ import SendIcon from '@material-ui/icons/Send';
 import ClearIcon from '@material-ui/icons/Clear';
 import { IconButton } from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
+import Lista from './Lista.js';
 
 const useStyle = makeStyles ({
   oncancel : {
@@ -29,6 +30,9 @@ const Wrapper = () => {
         <div>
 
           <Navbarr />
+
+          <Lista />
+        
 
             <Typography 
             variant="h2"
