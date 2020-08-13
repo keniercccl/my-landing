@@ -1,20 +1,21 @@
 import React from 'react';
+
 import { AppBar, Toolbar, Typography , IconButton,makeStyles} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import {Menu , AccountCircle} from '@material-ui/icons';
 
 
 const useStyles = makeStyles(theme => ({
-    offset : theme.mixins.toolbar,
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-    root: {
-      flexGrow: 1,
-    }
-    },
+  appBar: {
+    width: `calc(100% - ${240}px)`,
+    marginLeft: 240,
+  },
+  root : {
+    display : 'flex'
+  },
+  title : {
+    flexGrow : 1,
+  },
+  
 }))
  
 const Navbarr = () => {
@@ -22,11 +23,11 @@ const Navbarr = () => {
   const clases = useStyles();
  
   return (
-    <div>
 
       <AppBar
-      className = {clases.root}
-      position="static" color="primary">
+      className = {clases.appBar}
+      position="static"
+      color="primary">
 
         <Toolbar>
 
@@ -34,7 +35,7 @@ const Navbarr = () => {
           className = {clases.menuButton}
           edge = 'start' >
 
-            <MenuIcon fontSize = 'large'/>
+            <Menu fontSize = 'large'/>
 
           </IconButton>
 
@@ -42,14 +43,18 @@ const Navbarr = () => {
             BIENVENIDO
           </Typography>
 
-          <AccountCircleIcon fontSize = 'large'/>
+          <IconButton
+          className = {clases.menuButton}
+          edge = 'start' >
+
+            <AccountCircle fontSize = 'large'/>
+
+          </IconButton>
+
 
         </Toolbar>
       </AppBar>
-      
 
-    </div>
-      
       )
 }
  
