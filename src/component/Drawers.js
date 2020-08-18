@@ -2,7 +2,9 @@ import React from 'react';
 import Lista from "./Lista";
 
 import {
-  makeStyles, Drawer
+  makeStyles,
+  Drawer,
+  Divider
 } from "@material-ui/core";
 import theme from './Themesui';
 
@@ -18,20 +20,24 @@ const useStyles = makeStyles( theme => ({
 }))
 
 
-function Drawers() {
+function Drawers(props) {
 
   const classes = useStyles();
 
   return (
     <Drawer 
-    className = {classes.drawer}
-    variant="permanent"
-    classes={{
-      paper: classes.drawerPaper,
-    }}
-    anchor="left"
-    >
-    <div className={classes.toolbar} />
+      className = {classes.drawer}
+      classes = {{
+        paper: classes.drawerPaper,
+      }}
+      anchor = "left"
+      variant = {props.variant}
+      open = {props.open}
+      onClose = {props.onClose ? props.onClose : null}
+      >
+
+    <div className = {classes.toolbar} />
+    <Divider />
 
       <Lista />
 
