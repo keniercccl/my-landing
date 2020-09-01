@@ -4,7 +4,6 @@ import {
     ListItem,
     ListItemIcon,
     ListItemText,
-		Hidden,
  } from "@material-ui/core";
 import {
 	Home,
@@ -23,7 +22,6 @@ const Lista = () => {
 							</ListItemIcon>
 							<ListItemText primary ='Home'/>
 						</ListItem>
-
 						
 						<ListItem button>
 							<ListItemIcon>
@@ -31,7 +29,6 @@ const Lista = () => {
 							</ListItemIcon>
 							<ListItemText primary ='About Me'/>
 						</ListItem>
-
 						
 						<ListItem button>
 							<ListItemIcon>
@@ -39,7 +36,6 @@ const Lista = () => {
 							</ListItemIcon>
 							<ListItemText primary ='Work'/>
 						</ListItem>
-
 						
 						<ListItem button>
 							<ListItemIcon>

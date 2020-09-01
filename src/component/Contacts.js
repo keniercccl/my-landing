@@ -4,7 +4,7 @@ import {
     Twitter,
     LinkedIn
 } from '@material-ui/icons';
-import { IconButton, Divider } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
 import React from 'react';
 
 const Contacts = () => {

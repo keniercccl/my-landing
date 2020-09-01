@@ -6,7 +6,6 @@ import {
   Drawer,
   Divider
 } from "@material-ui/core";
-import theme from './Themesui';
 
 const useStyles = makeStyles( theme => ({
   drawer: {
@@ -18,7 +17,6 @@ const useStyles = makeStyles( theme => ({
     width: 240,
   },
 }))
-
 
 function Drawers(props) {
 

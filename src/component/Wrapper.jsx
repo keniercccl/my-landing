@@ -8,17 +8,14 @@ import Drawers from './Drawers.js';
 
 import {
   makeStyles,
-  Divider,
   Grid,
   Hidden,
 } from '@material-ui/core';
 
-import { ImageRounded } from '@material-ui/icons';
-
 const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
   content: {
-    [theme.breakpoints.up('sm')]:{
+    [theme.breakpoints.up('lg')]:{
       flexGrow: 1,
       backgroundColor: theme.palette.background.default,
       padding: theme.spacing(3),
@@ -44,19 +41,12 @@ const Wrapper = () => {
         <div>
         <Navbarr 
         accionAbrir = {accionAbrir}/>
-        
-        <Hidden xsDown>
-          <Drawers 
-            variant = "permanent"
-            open = {true}/>
-        </Hidden>
 
-        <Hidden smUp>
+        <Hidden lgUp>
           <Drawers 
             variant = "temporary"
             open = {abrir}
-            onClose = {accionAbrir}
-             
+            onClose = {accionAbrir}             
             />
         </Hidden>
 
@@ -73,7 +63,6 @@ const Wrapper = () => {
             </Grid>
 
           </div>
-
 
             </div>
         );

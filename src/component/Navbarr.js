@@ -6,11 +6,8 @@ import {Menu , AccountCircle} from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
-    [theme.breakpoints.up('sm')]:{
-      width: `calc(100% - ${240}px)`,
-      marginLeft: 240,
-    }
-  },
+    display : 'flex'
+    },
   root : {
     display : 'flex'
   },
@@ -19,9 +16,6 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton :  {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
   }
 }))
  
