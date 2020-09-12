@@ -4,7 +4,8 @@ import Lista from "./Lista";
 import {
   makeStyles,
   Drawer,
-  Divider
+  Divider,
+  Avatar,
 } from "@material-ui/core";
 
 const useStyles = makeStyles( theme => ({
@@ -16,6 +17,11 @@ const useStyles = makeStyles( theme => ({
   drawerPaper: {
     width: 240,
   },
+  avatar : {
+    display: 'flex',
+    justifyContent: 'center',
+    
+  }
 }))
 
 function Drawers(props) {
@@ -35,6 +41,11 @@ function Drawers(props) {
       >
 
     <div className = {classes.toolbar} />
+
+    <Avatar 
+    src = "src/imgs/avatar.jpeg"
+    className = {classes.avatar} >K</Avatar>
+    
     <Divider />
 
       <Lista />

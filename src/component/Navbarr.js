@@ -6,8 +6,8 @@ import {Menu , AccountCircle} from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
-    display : 'flex'
-    },
+    display : 'flex',
+  },
   root : {
     display : 'flex'
   },
@@ -18,6 +18,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
   }
 }))
+
+const handleClick = () => {
+  console.log("Solicitando login");
+}
  
 const Navbarr = (props) => {
 
@@ -48,7 +52,8 @@ const Navbarr = (props) => {
 
           <IconButton
           className = {clases.menuButton}
-          edge = 'start' >
+          edge = 'start' 
+          onClick = {handleClick}>
 
             <AccountCircle fontSize = 'large'/>
 

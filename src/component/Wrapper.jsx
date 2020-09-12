@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbarr from "./Navbarr.js";
 import Contacts from "./Contacts.js";
 import Aboutme from "./Aboutme.js";
@@ -14,14 +14,6 @@ import {
 
 const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
-  content: {
-    [theme.breakpoints.up('lg')]:{
-      flexGrow: 1,
-      backgroundColor: theme.palette.background.default,
-      padding: theme.spacing(3),
-      marginLeft: 240,
-    }
-  },
   centralizar :  {
     alignContent : 'center'
   }
@@ -42,7 +34,7 @@ const Wrapper = () => {
         <Navbarr 
         accionAbrir = {accionAbrir}/>
 
-        <Hidden lgUp>
+        <Hidden>
           <Drawers 
             variant = "temporary"
             open = {abrir}

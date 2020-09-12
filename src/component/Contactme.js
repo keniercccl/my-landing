@@ -3,7 +3,8 @@ import Contacts from "./Contacts.js";
 import {
   Grid,
   TextField,
-  Button
+  Button,
+  Card,
  } from '@material-ui/core';
  import { Delete , Send } from "@material-ui/icons";
  import { makeStyles } from "@material-ui/styles";
@@ -31,10 +32,8 @@ function Contactme(props) {
   
   return (
     <div  >
-      <Grid 
-      className = {classes.root}
-      > 
-        <Contacts />
+      <Card className = {classes.root}> 
+        
         <Grid spacing={3}>
 
           <TextField id="standad-basic" margin ="dense" label= "Tu Nombre" />
@@ -50,8 +49,8 @@ function Contactme(props) {
           variant="outlined"/>
             <br/>
 
-            <Grid 
-            className = {classes.buttonContents}>
+            <Grid className = {classes.buttonContents}>
+
               <Button
               className = {classes.buttonStyle}
               variant="contained"
@@ -71,7 +70,9 @@ function Contactme(props) {
 
           </Grid>
 
-      </Grid>
+          <Contacts />
+
+      </Card>
     </div>
   );  
 } 
